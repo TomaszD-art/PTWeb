@@ -1,0 +1,12 @@
+{% extends "mainApp/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <legend>Log in</legend>
+            {{ form|crispy }}
+            <button>Sign In</button>
+        </form>
+    </div>
+{% endblock content %}
